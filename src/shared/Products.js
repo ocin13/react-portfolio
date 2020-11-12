@@ -10,7 +10,7 @@ export const PRODUCTS = [
     {
         id: 1,
         name:"fashion02 ",
-        image: "/assets/images/fashion02.jpg",
+        image: "../assets/images/fashion02.jpg",
         price: 23.99,
         featured: false,
         description: "This is a wolrd class fashion clothes made by of the famous brand in the market clothes"

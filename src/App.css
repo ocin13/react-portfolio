@@ -1,3 +1,4 @@
+
 body{
   text-transform: capitalize;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -8,20 +9,22 @@ body{
 }
 footer{
   padding: 20px 10px;
-  background-image: linear-gradient(to right,rgb(99, 3, 75),rgb(238, 58, 229),rgb(245, 120, 224));
+  background-image: linear-gradient(to right,rgb(155, 7, 56),rgb(238, 58, 118),rgb(245, 120, 168));
 }
 ul{
   list-style: none;
 }
-a{
-  text-decoration: none;
-  color: white;
-}
 
 .jumbotron{
-  background-image: linear-gradient(to right,rgb(99, 3, 75),rgb(238, 58, 229),rgb(245, 120, 224));
+  background-image: linear-gradient(to right,rgb(155, 7, 56),rgb(238, 58, 118),rgb(245, 120, 168));
   color: white;
 }
 .navbar-site{
-  background-color: rgb(202, 1, 125);
+  background-color: rgb(202, 1, 51);
+}
+.card{
+  border-radius: 0;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-decoration: none;
 }

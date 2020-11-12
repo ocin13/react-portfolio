@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 
 function Contact(){
     return(
-        <h1>contact us</h1>
+        <React.Fragment>
+                
+        </React.Fragment>
     );
 }
 

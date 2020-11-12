@@ -14,14 +14,24 @@ import Products from './products';
 import {Switch,Route,Redirect,withRouter} from 'react-router-dom'
 
 class Main extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            products : PRODUCTS,
+            comments : COMMENTS,
+            Collections : COLLECTIONS,
+            articles : ARTICLES,
+            members : MEMBERS
+        };
+    }
     render(){
         return(
             <React.Fragment>
                 <Header />
                 <Switch>
                     <Route path="/home" component={Home} />
-                    <Route path="/products" render={() => <Products />} />
-                    <Route path="/blog" component={Blog} />
+                    <Route path="/products" render={() => <Products products={this.state.products} />} />
+                    <Route path="/blog" render={() => <Blog articles={this.state.articles} />} />
                     <Route path="/aboutus" component={About} />
                     <Route path="/contactus" component={Contact} />
                     <Redirect to="/home" />
