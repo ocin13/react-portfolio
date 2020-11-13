@@ -4,16 +4,18 @@ import {Link} from 'react-router-dom'
 
 function RenderArticleCard({article}){
     return(
-        <Card>
-        <CardBody>
-            <CardTitle>{article.title}</CardTitle>
-            <CardSubtitle> {article.subtitle.slice(0,20)} </CardSubtitle>
-        </CardBody>
-        <CardImg width="100%" height="200px" src={article.image} />
-        <CardBody>
-            <CardText> {article.subtitle} </CardText>
-            <CardLink>Read More...</CardLink>
-        </CardBody>
+        <Card className="article px-5">
+            <Link to={`/blog/${article.id}`}>
+                <CardBody>
+                    <CardTitle className="articleTitle">{article.title}</CardTitle>
+                    <CardSubtitle> {article.subtitle.slice(0,20)} </CardSubtitle>
+                </CardBody>
+                <CardImg width="100%" height="200px" src={article.image} />
+                <CardBody>
+                    <CardText> {article.subtitle} </CardText>
+                    <CardLink>Read More...</CardLink>
+                </CardBody>
+        </Link>
     </Card>
     );
 }
@@ -22,7 +24,7 @@ function RenderArticleCard({article}){
 function Blog(props){
     const articlesList = props.articles.map(article =>{
         return (
-            <ListGroupItem tag="a" key={article.id}>{+article.id + 1}-{article.title}</ListGroupItem>
+            <ListGroupItem tag="a" key={article.id}> <Link to={`/blog/${article.id}`}>{+article.id + 1}-{article.title}</Link></ListGroupItem>
         );
     });
     const articles = props.articles.map(article => {
@@ -36,13 +38,13 @@ function Blog(props){
         <div className="row">
             <div className="col">
                 <Breadcrumb>
-                    <BreadcrumbItem to='/home'>Home</BreadcrumbItem>
+                    <BreadcrumbItem ><Link to='/home'>Home</Link></BreadcrumbItem>
                     <BreadcrumbItem active>Artiles</BreadcrumbItem>
                 </Breadcrumb>
             </div>
             <div className="row">
-                <div className="col-5">
-                   <ListGroup> {articlesList} </ListGroup>
+                <div className="col-5 articleList">
+                   <ListGroup>{articlesList}  </ListGroup>
                 </div>
                 <div className="col col-7">
                     {articles}

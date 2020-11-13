@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
-import {Breadcrumb,BreadcrumbItem} from 'reactstrap'
+import {Breadcrumb,BreadcrumbItem} from 'reactstrap';
+import {Link} from 'react-router-dom'
 
 function About(){
     return(
-        <div className="row text-center py-5">
+        <div className="container">
+            <div className="row text-center py-5">
             <div className="col">
-                <BreadcrumbItem>
-                    <BreadcrumbItem to="/home">Home</BreadcrumbItem>
+                <Breadcrumb>
+                    <BreadcrumbItem ><Link to='/home'>Home</Link></BreadcrumbItem>
                     <BreadcrumbItem active>About Us</BreadcrumbItem>
-                </BreadcrumbItem>
+                </Breadcrumb>
             </div>
             <div className="row text-center">
                 <div className="col-6 mx-auto">
@@ -22,6 +24,7 @@ function About(){
                     <img width="100%" height="300px" alt="about us image" src="/assets/images/article02.jpg" />
                 </div>
             </div>
+        </div>
         </div>
     );
 }

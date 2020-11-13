@@ -11,6 +11,7 @@ import Blog from './blog';
 import Contact from './contact';
 import About from './about';
 import Products from './products';
+import BlogInfo from './blogInfo';
 import {Switch,Route,Redirect,withRouter} from 'react-router-dom'
 
 class Main extends Component{
@@ -24,14 +25,22 @@ class Main extends Component{
             members : MEMBERS
         };
     }
+
     render(){
+        const ArticleInfo = ({match}) => {
+            return(
+                <BlogInfo article={this.state.articles.filter(article => article.id === +match.params.articleId)[0]}/>
+            );
+        };
+
         return(
             <React.Fragment>
                 <Header />
                 <Switch>
                     <Route path="/home" component={Home} />
                     <Route path="/products" render={() => <Products products={this.state.products} />} />
-                    <Route path="/blog" render={() => <Blog articles={this.state.articles} />} />
+                    <Route exact path="/blog" render={() => <Blog articles={this.state.articles} />} />
+                    <Route path="/blog/:articleId" component={ArticleInfo} />
                     <Route path="/aboutus" component={About} />
                     <Route path="/contactus" component={Contact} />
                     <Redirect to="/home" />
