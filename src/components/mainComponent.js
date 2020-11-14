@@ -33,11 +33,19 @@ class Main extends Component{
             );
         };
 
+        const HomePage = () => {
+            return(
+                <Home hotProducts={this.state.products.filter(product => product.featured == true)} 
+                featuredArticle={this.state.articles.filter(article => article.featured == true)[0]}
+                />
+            );
+        };
+
         return(
             <React.Fragment>
                 <Header />
                 <Switch>
-                    <Route path="/home" component={Home} />
+                    <Route path="/home" component={HomePage} />
                     <Route path="/products" render={() => <Products products={this.state.products} />} />
                     <Route exact path="/blog" render={() => <Blog articles={this.state.articles} />} />
                     <Route path="/blog/:articleId" component={ArticleInfo} />

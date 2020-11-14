@@ -7,7 +7,7 @@ class Header extends Component {
     render() {
         return (
             <React.Fragment>
-                <Jumbotron className="jumbotron mb-0" fluid>
+                <Jumbotron className="jumbotron mb-0 " fluid>
                     <div className="container">
                         <div className="row">
                             <div className="col">

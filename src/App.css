@@ -9,18 +9,19 @@ body{
 }
 footer{
   padding: 20px 10px;
-  background-image: linear-gradient(to right,rgb(155, 7, 56),rgb(238, 58, 118),rgb(245, 120, 168));
+  background-image: linear-gradient(to right,rgb(7, 133, 155),rgb(58, 172, 238),rgb(120, 216, 245));
 }
 ul{
   list-style: none;
 }
 
 .jumbotron{
-  background-image: linear-gradient(to right,rgb(155, 7, 56),rgb(238, 58, 118),rgb(245, 120, 168));
+  background-image: linear-gradient(to right,rgb(7, 133, 155),rgb(58, 172, 238),rgb(120, 216, 245));
   color: white;
+  height: 170px;
 }
 .navbar-site{
-  background-color: rgb(202, 1, 51);
+  background-color: rgb(1, 155, 202);
 }
 .card{
   border-radius: 0;
@@ -48,3 +49,20 @@ ul{
   font-size: 1.6em;
   font-weight: 600;
 }
+.frame{
+  border: 1px gray solid;
+  box-shadow: 1px 1px 5px gray;
+  text-align: center;
+}
+.frame > span > i {
+  font-size: 3.6em;
+}
+.newsletters{
+  background-image: linear-gradient(to right,rgb(7, 133, 155),rgb(58, 172, 238),rgb(120, 216, 245));
+}
+.newsletters >  div > form {
+  width: 100%;
+}
+.inputnews{
+  color: white;
+} 

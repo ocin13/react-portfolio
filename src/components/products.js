@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Card,CardImg,CardTitle,CardLink,CardText,Breadcrumb,BreadcrumbItem, CardBody} from 'reactstrap';
 import {Link} from 'react-router-dom'
 
-function RenderProductCard({product}){
+export function RenderProductCard({product}){
     return(
         
             <Card className="card">
