@@ -49,7 +49,7 @@ class Main extends Component{
                     <Route path="/products" render={() => <Products products={this.state.products} />} />
                     <Route exact path="/blog" render={() => <Blog articles={this.state.articles} />} />
                     <Route path="/blog/:articleId" component={ArticleInfo} />
-                    <Route path="/aboutus" component={About} />
+                    <Route path="/aboutus" render={() => <About members={this.state.members} />} />
                     <Route path="/contactus" component={Contact} />
                     <Redirect to="/home" />
                 </Switch>

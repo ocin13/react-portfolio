@@ -8,20 +8,29 @@ body{
   text-transform: capitalize;
 }
 footer{
+  line-height: 40px;
   padding: 20px 10px;
-  background-image: linear-gradient(to right,rgb(7, 133, 155),rgb(58, 172, 238),rgb(120, 216, 245));
+  background-image: linear-gradient(to right,rgb(7, 150, 155),rgb(58, 238, 214),rgb(120, 245, 245));
+}
+footer a{
+  text-decoration: none;
+  color: black;
+  transition: all ease-in-out 400ms;
+}
+footer a:hover{
+  color: whitesmoke;
 }
 ul{
   list-style: none;
 }
 
 .jumbotron{
-  background-image: linear-gradient(to right,rgb(7, 133, 155),rgb(58, 172, 238),rgb(120, 216, 245));
+  background-image: linear-gradient(to right,rgb(7, 150, 155),rgb(58, 238, 214),rgb(120, 245, 245));
   color: white;
   height: 170px;
 }
 .navbar-site{
-  background-color: rgb(1, 155, 202);
+  background-color: rgb(1, 195, 202);
 }
 .card{
   border-radius: 0;
@@ -50,6 +59,7 @@ ul{
   font-weight: 600;
 }
 .frame{
+  width: 80%;
   border: 1px gray solid;
   box-shadow: 1px 1px 5px gray;
   text-align: center;
@@ -58,7 +68,10 @@ ul{
   font-size: 3.6em;
 }
 .newsletters{
-  background-image: linear-gradient(to right,rgb(7, 133, 155),rgb(58, 172, 238),rgb(120, 216, 245));
+  background-image: linear-gradient(to right,rgb(7, 150, 155),rgb(58, 238, 214),rgb(120, 245, 245));
+}
+.newsletters h6{
+  letter-spacing: 4px;
 }
 .newsletters >  div > form {
   width: 100%;
@@ -66,3 +79,49 @@ ul{
 .inputnews{
   color: white;
 } 
+.socialList{
+  list-style: none;
+}
+.socialList > li{
+  display: inline;
+}
+.socialList > li > a{
+  font-size: 1.3em;
+  transition: all ease-in-out 300ms;
+}
+.socialList > li > a:hover{
+  font-size: 1.4em;
+  color: white;
+}
+.teamCard{
+  border: none;
+  overflow: hidden;
+  
+}
+.teamCard img{
+  transition: all ease-in-out 400ms;
+}
+.teamCard img:hover{
+  transform: scale(1.1);
+} 
+.cardProduct{
+  border: none;
+}
+.buyButton{
+  padding: 12px 10px;
+  background-color: rgb(12, 151, 137);
+  border-radius: 5px;
+  font-weight: 600;
+  
+}
+.buyButton:hover{
+  background-color: rgb(4, 78, 71);
+}
+.cardProduct a {
+  text-decoration: none;
+  color: black;
+}
+.productName{
+  font-size: 1.1em;
+  font-weight: 600;
+}
